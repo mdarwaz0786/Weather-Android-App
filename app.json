@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "weatherApp",
-    "slug": "weatherApp",
+    "name": "Weather App",
+    "slug": "Weather-App",
+    "description": "This application delivers real-time weather data based on user-specified city names.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,9 +12,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },

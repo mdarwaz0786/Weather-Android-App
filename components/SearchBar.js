@@ -7,12 +7,7 @@ export default function SearchBar({ fetchWeatherData }) {
 
     return (
         <View style={styles.searchBar}>
-            <TextInput
-                placeholder='Enter City name'
-                value={cityName}
-                onChangeText={(text) => setCityName(text)}
-                style={{ outlineStyle: 'none' }}
-            />
+            <TextInput onChangeText={(text) => setCityName(text)} value={cityName} placeholder='Enter City name' />
             <EvilIcons name="search" size={28} color="black" onPress={() => fetchWeatherData(cityName)} />
         </View>
     );
@@ -20,7 +15,7 @@ export default function SearchBar({ fetchWeatherData }) {
 
 const styles = StyleSheet.create({
     searchBar: {
-        marginTop: 35,
+        marginTop: 50,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -32,5 +27,5 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         backgroundColor: 'lightgray',
         borderColor: 'lightgray'
-    }
+    },
 });

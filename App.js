@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import Weather from './components/Weather.js';
 import SearchBar from './components/SearchBar.js';
 
 const API_KEY = "041e2eb3e5f4f3350250c8968cc512ad";
+
 export default function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [loaded, setLoaded] = useState(true);
@@ -27,7 +27,7 @@ export default function App() {
   };
 
   useEffect(() => {
-    fetchWeatherData("Mumbai");
+    fetchWeatherData("Samastipur");
   }, []);
 
 

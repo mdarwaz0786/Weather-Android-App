@@ -15,17 +15,17 @@ export default function Weather({ weatherData, fetchWeatherData }) {
 
     const [{ main }] = weather;
 
+    function getBackgroundImg(main) {
+        if (main === 'Snow') return snow;
+        if (main === 'Clear') return sunny;
+        if (main === 'Rain') return rainy;
+        if (main === 'Haze') return haze;
+        return haze;
+    };
+
     useEffect(() => {
         setBackgroundImage(getBackgroundImg(main));
     }, [weatherData]);
-
-    function getBackgroundImg(weather) {
-        if (weather === 'Snow') return snow;
-        if (weather === 'Clear') return sunny;
-        if (weather === 'Rain') return rainy;
-        if (weather === 'Haze') return haze;
-        return haze;
-    };
 
     let textColor = backgroundImage !== sunny ? 'white' : 'black';
 

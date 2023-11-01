@@ -1,14 +1,18 @@
 {
+  "cli": {
+    "version": ">= 5.6.0"
+  },
   "build": {
-    "production": {
-      "env": {
-        "EXPO_PUBLIC_API_URL": "https://api.production.com"
-      }
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
     },
-    "test": {
-      "env": {
-        "EXPO_PUBLIC_API_URL": "https://api.test.com"
-      }
-    }
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {}
   }
 }

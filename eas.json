@@ -1,18 +1,14 @@
 {
   "build": {
-    "preview": {
-      "android": {
-        "buildType": "apk"
+    "production": {
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api.production.com"
       }
     },
-    "preview2": {
-      "android": {
-        "gradleCommand": ":app:assembleRelease"
+    "test": {
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api.test.com"
       }
-    },
-    "preview3": {
-      "developmentClient": true
-    },
-    "production": {}
+    }
   }
 }
